@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     float v [4];
-    float r [4];
+    float r [4] = {0, 0, 0, 0 };
     float m [4][4];
 
     for (int i = 0; i < 4; i++) {
