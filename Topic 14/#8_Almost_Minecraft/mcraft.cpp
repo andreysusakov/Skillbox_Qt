@@ -12,7 +12,7 @@ int main()
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
             for (int k = 0; k < 10; k++) {
-                cout << "Set block level " << k << " in sector " << i << ";" << j << ", enter 0 or 1" << endl;
+                cout << "Set block level " << k << " in sector " << i << ";" << j << ", enter 0 or 10" << endl;
                 cin >> l;
                 mcraft [i][j][k] = l;
 
