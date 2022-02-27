@@ -1,0 +1,3 @@
+C:/Skillbox/build-sea_battle-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/sea_battle.dir
+C:/Skillbox/build-sea_battle-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Skillbox/build-sea_battle-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
