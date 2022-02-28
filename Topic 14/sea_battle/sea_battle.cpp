@@ -21,9 +21,7 @@ int arrangement_1 (bool a [][10], int x1, int x2) {
     if (a [x1][x2] == true){
         cout << "Busy!\n";
     }else if (x1 < 0 || x2 < 0 || x1 > 10 || x2 > 10) {
-        cout << "Shoot only in the war zone!\n";
-    }else if (x1 != x2) {
-        cout << "A ship cannot be placed diagonally!\n";
+        cout << "Shoot only in the war zone!\n";    
     }else {
         a [x1][x2] = true;
         cout << "Ok!\n";
@@ -91,8 +89,7 @@ int main()
     do {
         cout << "Enter ship coordinates x1;x2.\n";
         cin >> x1 >> x2;
-        state_1 += arrangement_1(ship_1, x1, x2);
-        cout << state_1 << endl;
+        state_1 += arrangement_1(ship_1, x1, x2);        
     }while (state_1 < 4);
 
 
