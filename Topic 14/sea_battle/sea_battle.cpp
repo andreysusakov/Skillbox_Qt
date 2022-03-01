@@ -16,12 +16,11 @@ void field (bool a [][10]){
 
 
 
-int arrangement_1 (bool a [][10], int x1, int x2) {
-    int sum = 0;
+int arrangement_1 (bool a [][10], int x1, int x2, int sum) {
     if (a [x1][x2] == true){
         cout << "Busy!\n";
     }else if (x1 < 0 || x2 < 0 || x1 > 10 || x2 > 10) {
-        cout << "Shoot only in the war zone!\n";    
+        cout << "Don't go out of the field!\n";
     }else {
         a [x1][x2] = true;
         cout << "Ok!\n";
@@ -33,20 +32,19 @@ return sum;
 
 
 
-int arrangement_2 (bool a [][10], int x1, int x2, int x3, int x4) {
-    int sum = 0;
-    for (int i = x1; i != x3 ; i++){
-        for (int j = x2; j != x4; j++){
-            if (a [i][j] == true){
+int arrangement_2 (bool a [][10], int x1, int x2, int x3, int x4, int sum) {
+    for (int i = x1; i < (x3 + 1) ; i++) {
+        for (int j = x2; j < (x4 + 1); j++) {
+            if (a [i][j] == true) {
                 cout << "Busy!\n";
             }else if (x1 < 0 || x2 < 0 || x3 > 10 || x4 > 10) {
-                cout << "Shoot only in the war zone!\n";
+                cout << "Don't go out of the field!\n";
             }else if ((x1 != x3 && x2 != x4)) {
                 cout << "A ship cannot be placed diagonally!\n";
             }else {
                 a [i][j] = true;
                 cout << "Ok!\n";
-                sum = 1;
+                sum += 1;
             }
         }
 
@@ -76,6 +74,7 @@ int main()
     int x2 = 0;
     int x3 = 0;
     int x4 = 0;
+    int sum = 0;
     int state_1 = 0;
     int state_2 = 0;
     bool ship_1 [10][10];
@@ -89,7 +88,8 @@ int main()
     do {
         cout << "Enter ship coordinates x1;x2.\n";
         cin >> x1 >> x2;
-        state_1 += arrangement_1(ship_1, x1, x2);        
+        state_1 += arrangement_1(ship_1, x1, x2, sum);
+        cout << state_1 << endl;
     }while (state_1 < 4);
 
 
@@ -100,7 +100,8 @@ int main()
         cout << "Enter ship coordinates. Start of the ship x1;x2, ship's end x3;x4.\n";
         cin >> x1 >> x2 >> x3 >> x4;
 
-        state_1 += arrangement_2(ship_1, x1, x2, x3, x4);
+        state_1 += arrangement_2(ship_1, x1, x2, x3, x4, sum);
+        cout << state_1 << endl;
     }while (state_1 < 20);
 
 
@@ -111,8 +112,8 @@ int main()
     do{
         cout << "Enter ship coordinates x1;x2\n";
         cin >> x1 >> x2;
-        state_2 += arrangement_1(ship_2, x1, x2);
-    }while (state_1 < 4);
+        state_2 += arrangement_1(ship_2, x1, x2, sum);
+    }while (state_2 < 4);
 
 
     cout << "Placement of multi-deck ships of the second player\n";
@@ -121,7 +122,7 @@ int main()
     do{
     cout << "Enter ship coordinates. Start of the ship x1;x2, ship's end x3;x4.\n";
     cin >> x1 >> x2 >> x3 >> x4;
-    state_2 += arrangement_2(ship_2, x1, x2, x3, x4);
+    state_2 += arrangement_2(ship_2, x1, x2, x3, x4, sum);
     }while (state_2 < 20);
 
 
