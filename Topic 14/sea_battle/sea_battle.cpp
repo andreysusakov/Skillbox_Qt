@@ -17,10 +17,10 @@ void field (bool a [][10]){
 
 
 int arrangement_1 (bool a [][10], int x1, int x2, int sum) {
-    if (a [x1][x2] == true){
-        cout << "Busy!\n";
-    }else if (x1 < 0 || x2 < 0 || x1 > 10 || x2 > 10) {
+    if (x1 < 0 || x2 < 0 || x1 > 10 || x2 > 10) {
         cout << "Don't go out of the field!\n";
+    }else if (a [x1][x2] == true){
+        cout << "Busy!\n";
     }else {
         a [x1][x2] = true;
         cout << "Ok!\n";
@@ -33,22 +33,26 @@ return sum;
 
 
 int arrangement_2 (bool a [][10], int x1, int x2, int x3, int x4, int sum) {
-    for (int i = x1; i < (x3 + 1) ; i++) {
-        for (int j = x2; j < (x4 + 1); j++) {
-            if (a [i][j] == true) {
-                cout << "Busy!\n";
-            }else if (x1 < 0 || x2 < 0 || x3 > 10 || x4 > 10) {
-                cout << "Don't go out of the field!\n";
-            }else if ((x1 != x3 && x2 != x4)) {
-                cout << "A ship cannot be placed diagonally!\n";
-            }else {
-                a [i][j] = true;
-                cout << "Ok!\n";
-                sum += 1;
+    if (x1 < 0 || x2 < 0 || x3 > 10 || x4 > 10) {
+        cout << "Don't go out of the field!\n";
+    }else if (x1 != x3 && x2 != x4) {
+        cout << "A ship cannot be placed diagonally!\n";
+    }else {
+        for (int i = x1; i < (x3 + 1) ; i++) {
+            for (int j = x2; j < (x4 + 1); j++) {
+                if (a [i][j] == true) {
+                    cout << "Busy!\n";
+                    break;
+                }else {
+                    a [i][j] = true;
+                    cout << "Ok!\n";
+                    sum += 1;
+                }
             }
-        }
 
+        }
     }
+
 
     return sum;
 }
@@ -127,17 +131,18 @@ int main()
 
 
     cout << "Shootout!";
-    cout << "************************************************************************";
+    cout << "************************************************************************\n";
 
     do {
-
-        cout << "First player shot";
+        cout << "First player shot\n";
+        cout << "Enter ship coordinates x1;x2\n";
+        cin >> x1 >> x2;
         state_1 = shot (ship_1, x1, x2, state_1);
 
-
-        cout << "Second player shot";
+        cout << "Second player shot\n";
+        cout << "Enter ship coordinates x1;x2\n";
+        cin >> x1 >> x2;
         state_2 = shot (ship_2, x1, x2, state_2);
-
 
     }while (state_1 > 0 || state_2 > 0);
     if (state_1 == 0) {
