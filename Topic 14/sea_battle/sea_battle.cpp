@@ -93,22 +93,50 @@ int main()
         cout << "Enter ship coordinates x1;x2.\n";
         cin >> x1 >> x2;
         state_1 += arrangement_1(ship_1, x1, x2, sum);
-        cout << state_1 << endl;
     }while (state_1 < 4);
 
 
-    cout << "Placing First Player Multideck Ships\n";
-    cout << "Place 3 2-deck, 2 3-deck, 1 4-deck multi-deck ships\n";
+    cout << "Placing First Player Multideck Ships.\n";
+    cout << "Place 3 2-deck multi-deck ships.\n";
 
     do {
         cout << "Enter ship coordinates. Start of the ship x1;x2, ship's end x3;x4.\n";
         cin >> x1 >> x2 >> x3 >> x4;
+        if ((x3 - x1) != 1 && (x4 - x2) != 1) {
+            cout << "The ship must occupy 2 spaces!\n";
+        }else {
+            state_1 += arrangement_2(ship_1, x1, x2, x3, x4, sum);
+        }
 
-        state_1 += arrangement_2(ship_1, x1, x2, x3, x4, sum);
-        cout << state_1 << endl;
+    }while (state_1 < 10);
+
+    cout << "Place 2 3-deck multi-deck ships.\n";
+
+    do {
+        cout << "Enter ship coordinates. Start of the ship x1;x2, ship's end x3;x4.\n";
+        cin >> x1 >> x2 >> x3 >> x4;
+        if ((x3 - x1) != 2 && (x4 - x2) != 2) {
+            cout << "The ship must occupy 3 spaces!\n";
+        }else {
+            state_1 += arrangement_2(ship_1, x1, x2, x3, x4, sum);
+        }
+
+    }while (state_1 < 16);
+
+    cout << "Place 1 4-deck multi-deck ships.\n";
+
+    do {
+        cout << "Enter ship coordinates. Start of the ship x1;x2, ship's end x3;x4.\n";
+        cin >> x1 >> x2 >> x3 >> x4;
+        if ((x3 - x1) != 3 && (x4 - x2) != 3) {
+            cout << "The ship must occupy 4 spaces!\n";
+        }else {
+            state_1 += arrangement_2(ship_1, x1, x2, x3, x4, sum);
+        }
+
     }while (state_1 < 20);
 
-
+    cout << "***********************************************************************";
 
 
     cout << "Placement of single-deck ships of the second player";
@@ -121,12 +149,43 @@ int main()
 
 
     cout << "Placement of multi-deck ships of the second player\n";
-    cout << "Place 3 2-deck, 2 3-deck, 1 4-deck multi-deck ships\n";
+    cout << "Place 3 2-deck multi-deck ships.\n";
 
-    do{
-    cout << "Enter ship coordinates. Start of the ship x1;x2, ship's end x3;x4.\n";
-    cin >> x1 >> x2 >> x3 >> x4;
-    state_2 += arrangement_2(ship_2, x1, x2, x3, x4, sum);
+    do {
+        cout << "Enter ship coordinates. Start of the ship x1;x2, ship's end x3;x4.\n";
+        cin >> x1 >> x2 >> x3 >> x4;
+        if ((x3 - x1) != 1 && (x4 - x2) != 1) {
+            cout << "The ship must occupy 2 spaces!\n";
+        }else {
+           state_2 += arrangement_2(ship_2, x1, x2, x3, x4, sum);
+        }
+
+    }while (state_2 < 10);
+
+    cout << "Place 2 3-deck multi-deck ships.\n";
+
+    do {
+        cout << "Enter ship coordinates. Start of the ship x1;x2, ship's end x3;x4.\n";
+        cin >> x1 >> x2 >> x3 >> x4;
+        if ((x3 - x1) != 2 && (x4 - x2) != 2) {
+            cout << "The ship must occupy 3 spaces!\n";
+        }else {
+            state_2 += arrangement_2(ship_2, x1, x2, x3, x4, sum);
+        }
+
+    }while (state_2 < 16);
+
+    cout << "Place 1 4-deck multi-deck ships.\n";
+
+    do {
+        cout << "Enter ship coordinates. Start of the ship x1;x2, ship's end x3;x4.\n";
+        cin >> x1 >> x2 >> x3 >> x4;
+        if ((x3 - x1) != 3 && (x4 - x2) != 3) {
+            cout << "The ship must occupy 4 spaces!\n";
+        }else {
+            state_2 += arrangement_2(ship_2, x1, x2, x3, x4, sum);
+        }
+
     }while (state_2 < 20);
 
 
