@@ -72,6 +72,20 @@ int shot (bool a [][10], int x1, int x2, int sum) {
 }
 
 
+void condition (bool a [][10]){
+    for (int i = 0; i < 10; i++){
+        for (int j = 0; j < 10; j++){
+            if (a [i][j] == true){
+                cout << 'O';
+            }
+            else {
+                cout << '.';
+            }
+        }
+        cout << "\n";
+    }
+}
+
 int main()
 {
     int x1 = 0;
@@ -136,7 +150,10 @@ int main()
 
     }while (state_1 < 20);
 
-    cout << "***********************************************************************";
+    cout << "***********************************************************************\n";
+    condition(ship_1);
+
+    cout << "***********************************************************************\n";
 
 
     cout << "Placement of single-deck ships of the second player";
@@ -187,6 +204,10 @@ int main()
         }
 
     }while (state_2 < 20);
+
+
+    cout << "***********************************************************************\n";
+    condition(ship_2);
 
 
     cout << "Shootout!";
