@@ -9,6 +9,7 @@ int main()
     int sum = 0;
     int number_1 = 0;
     int number_2 = 0;
+    bool no = true;
     vector <int> vec = {2, 7, 11, 15};
     cout << "Enter result number\n";
     cin >> n;
@@ -19,10 +20,16 @@ int main()
             if (vec[j] == sum){
                 number_1 = vec[i];
                 number_2 = vec[j];
+                no = false;
+                break;
             }
         }
     }
-    cout << "First index = " << number_1 << "\n" << "Second index = " << number_2 << endl;
+    if (no){
+        cout << "There are no such numbers!\n";
+    }else{
+        cout << "First number = " << number_1 << "\n" << "Second number = " << number_2 << endl;
+    }
 
     return 0;
 }
