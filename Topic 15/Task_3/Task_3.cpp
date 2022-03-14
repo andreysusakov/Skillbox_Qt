@@ -18,13 +18,17 @@ int main()
             cout << a[4] << endl;
         }else{
             a.push_back(n);
-            for(int i = 0; n < a.size(); i++){
-                if(n < a[i]){
-                    swap(a[i], n);
+            for(int i = a.size() - 1; i > 0; i--){
+                if(a[i] < a[i - 1]){
+                    swap(a[i], a[i - 1]);
                 }
             }
 
         }
+        for(int i = 0; i < a.size(); i++){
+            cout << a[i] << " ";
+        }
+
         cout << "Enter vector element: \n";
         cin >> n;
 
