@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    vector <int> a = {-2,1,-3,4,-1,2,1,-5,4};
+    vector <int> a = {1,2,3,4,-5,6,7,-8,-9};
     int maxSum = 0;
     int minInd = 0;
     int maxInd = 0;
@@ -13,9 +13,9 @@ int main()
     int i = 0;
     int j = 0;
 
-    for (i = 0; a.size(); i++){
+    for (i = 0; i < a.size(); i++){
         sum = a[i];
-        for (j = i+1; a.size(); j++){
+        for (j = i+1; j < a.size(); j++){
             sum += a[j];
             if (maxSum < sum){
                 maxSum = sum;
