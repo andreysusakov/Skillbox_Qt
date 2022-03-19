@@ -12,6 +12,7 @@ int main()
 
     cout << "Enter vector element: \n";
     cin >> n;
+    a[0] = n;
 
     while(n != -2){
         if(n == -1 & a.size() < 5){
