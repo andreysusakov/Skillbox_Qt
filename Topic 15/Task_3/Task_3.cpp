@@ -20,17 +20,17 @@ int main()
         }else if(n == -1){
             cout << a[4] << endl;
         }else{
-            a.push_front(n);
             if(a.size() < 5){
+                a.push_front(n);
                 for(int i = 0; i < a.size(); i++){
                     if(a[i] > a[i + 1]){
                         swap(a[i], a[i + 1]);
                     }
                 }
             }else if(a[4] > n){
+                a.pop_back();
                 a.push_back(n);
-                a[4] = n;
-                for(int i = a.size() - 1; i > 0; i--){
+                for(int i = a.size() - 1; i >= 0; i--){
                     if(a[i] > a[i + 1]){
                         swap(a[i], a[i + 1]);
                     }
