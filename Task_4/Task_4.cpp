@@ -1,20 +1,15 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
-<<<<<<< HEAD
-=======
 #include <deque>
->>>>>>> 344386f13ab792b3ec201e8c4b6e5f2d318cd250
 
 using namespace std;
 
 int main()
 {
-<<<<<<< HEAD
     vector <int> vec = {-100,-50, -5, 1, 10, 15};
 
-    cout << "Hello World!" << endl;
-=======
+
     int n = 0;
     vector<int> a = {-100,-50,-5,1,10,15};
 
@@ -34,8 +29,5 @@ int main()
     }
 
 
-
-
->>>>>>> 344386f13ab792b3ec201e8c4b6e5f2d318cd250
     return 0;
 }
