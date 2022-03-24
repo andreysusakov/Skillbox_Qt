@@ -23,7 +23,27 @@ int main()
             cout << a[i] << " ";
         }
     }else{
-        for(int i = a.size() - 1; a[i] > 0; i--){
+        for(int i = a.size() - 1; a[i] >= 0; i--){
+            if(a[i] < 0){
+                n = i;
+                for(int j = n + 1; j < a.size(); j++){
+                    if(a[i] < a[j] & i == 0){
+                        cout << a[i] << " ";
+                        for(int k = j; k < a.size(); k++){
+                            cout << a[k] << " ";
+                        }
+                    }else if(a[i] > a[j] & j == a.size() - 1){
+                        cout << a[j] << " ";
+                        for(int z = j; z < a.size(); z++){
+                            cout << a[z] << " ";
+                        }
+                    }else if(a[i] > a[j]){
+                        cout << a[j] << " ";
+                    }else if(a[i] < a[j]){
+                        cout << a[j] << " ";
+                    }
+                }
+            }
 
         }
     }
