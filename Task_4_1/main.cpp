@@ -7,7 +7,9 @@ using namespace std;
 
 int main()
 {
-    vector<int> a = {-100,-50,-5,1,10,15};
+
+    int z = 0;
+    vector<int> a = {-200,-100,-5,1,10,15};
 
     if(a[a.size() - 1] < 0){
         for(int i = a.size() - 1; i >= 0; i--){
@@ -19,33 +21,42 @@ int main()
             cout << a[i] << " ";
         }
     }else{
-        for(int i = a.size() - 1; i >= 0; i--){
+        int i;
+
+        for(i = a.size() - 1; i >= 0; i--){
             if(a[i] < 0){
-                for(int n = i; n >= 0; n--){
-                    for(int j = i + 1; j < a.size(); j++){
-                        if(abs(a[0]) < a[j]){
-                            cout << a[0] << " ";
-                            for(int k = j; k < a.size(); k++){
-                                cout << a[k] << " ";
-                            }
-                        }else if(abs(a[n]) > a[a.size() - 1]){
-                            cout << a[j] << " ";
-                            for(int z = n; z < a.size(); z++){
-                                cout << a[z] << " ";
-                            }
-                        }else if(abs(a[n]) > a[j]){
-                            cout << a[j] << " ";
-                        }else if(abs(a[n]) < a[j]){
-                            cout << a[n] << " ";
-                        }
+                z = i + 1;
+                break;
+            }
+        }
+        int n = 1;
+        int q = 1;
+        int j;
+        for(int y = i; y > 0; y--){
+            for(j = z; ; j++){
+                if(abs(a[y]) >= a[j]){
+                    cout << a[j] << " ";
+                }else if(abs(a[y]) < a[j]){
+                    cout << a[y] << " ";
+                    z = j;
+                    cout << z << "//";
+
+                    break;
+                }else if(z == a.size() - 1){
+                    for(int x = y; x < a.size() - 1; x++){
+                        cout << a[x] << " ";
                     }
+                }else if(j == a.size() - 1 & y != 0){
+                    for(int x = y; x < a.size() - 1; x++){
+                        cout << a[x] << " ";
                 }
 
             }
 
-        }
     }
+
 
 
     return 0;
 }
+
