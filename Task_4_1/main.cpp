@@ -29,34 +29,40 @@ int main()
                 break;
             }
         }
-        int n = 1;
-        int q = 1;
         int j;
-        for(int y = i; y > 0; y--){
-            for(j = z; ; j++){
+        int y;
+        int q = 0;
+        for( y= i; y >= 0; y--){
+            for(j = z; j < a.size(); j++){
+
                 if(abs(a[y]) >= a[j]){
                     cout << a[j] << " ";
+                    z++;
+                    q = y;
+                    cout << "/" << q << "/";
+
                 }else if(abs(a[y]) < a[j]){
                     cout << a[y] << " ";
                     z = j;
-                    cout << z << "//";
-
+                    cout << "(" << z << ")";
                     break;
-                }else if(z == a.size() - 1){
-                    for(int x = y; x < a.size() - 1; x++){
-                        cout << a[x] << " ";
-                    }
-                }else if(j == a.size() - 1 & y != 0){
-                    for(int x = y; x < a.size() - 1; x++){
-                        cout << a[x] << " ";
                 }
-
             }
-
+        }
+        if(q != 0){
+            for(int x = q; x > 0; x--){
+                cout << a[x] << " ";
+            }
+        }else if(z != a.size() - 1){
+            for(int x = j; x < a.size() - 1; x++){
+                cout << a[x] << " ";
+            }
+        }
     }
-
 
 
     return 0;
 }
+
+
 
