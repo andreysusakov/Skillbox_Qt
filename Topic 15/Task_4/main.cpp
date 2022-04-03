@@ -9,7 +9,9 @@ int main()
 {
 
     int z = 0;
-    vector<int> a = {-200,-100,-5,1,10,15};
+    bool left = false;
+    bool right = false;
+    vector<int> a = {-200,-6,-1,2,25,300};
 
     if(a[a.size() - 1] < 0){
         for(int i = a.size() - 1; i >= 0; i--){
@@ -38,26 +40,27 @@ int main()
                 if(abs(a[y]) >= a[j]){
                     cout << a[j] << " ";
                     z++;
-                    q = y;
-                    cout << "/" << q << "/";
+                    if(j == a.size() - 1){
+                        for(int x = y; x < 0; x--){
+                            cout << a[x] << " ";
+                        }
+                    }
+
 
                 }else if(abs(a[y]) < a[j]){
                     cout << a[y] << " ";
                     z = j;
-                    cout << "(" << z << ")";
+                    if(y == 0){
+                        for(int x = j; x < a.size(); x++){
+                            cout << a[x] << " ";
+                        }
+                    }
+
                     break;
                 }
             }
         }
-        if(q != 0){
-            for(int x = q; x > 0; x--){
-                cout << a[x] << " ";
-            }
-        }else if(z != a.size() - 1){
-            for(int x = j; x < a.size() - 1; x++){
-                cout << a[x] << " ";
-            }
-        }
+
     }
 
 
