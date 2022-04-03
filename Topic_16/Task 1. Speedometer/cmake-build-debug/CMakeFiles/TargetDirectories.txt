@@ -1,0 +1,3 @@
+C:/Skillbox/Topic_16/Task 1. Speedometer/cmake-build-debug/CMakeFiles/Task_1__Speedometer.dir
+C:/Skillbox/Topic_16/Task 1. Speedometer/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Skillbox/Topic_16/Task 1. Speedometer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
