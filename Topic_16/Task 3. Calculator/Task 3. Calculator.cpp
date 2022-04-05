@@ -6,20 +6,18 @@ using namespace std;
 
 int main() {
     string buffer;
-    double result;
-    double x;
-    double y;
+    double result = .0f;
+    double x = 0;
+    double y = 0;
     char z;
-    stringstream buffer_stream;
+
 
     cout << "Enter an first example: " << endl;
-    cin >> x >> z >> y;
+    cin >> buffer;
+    stringstream buffer_stream(buffer);
 
-    buffer_stream << x << z << y;
-    cout << buffer_stream.str() << endl;
-    buffer_stream >> buffer >> x >> buffer >> z >> buffer >> y;
-    cout << x << " " << z << " " << y << endl;
-    result = ?; //Пока не понимаю как автоматом получить результат из переменных.
+    buffer_stream >> x >> z >> y;
+    result = x + y; //Пока не понимаю как автоматом вставлять оператор из переменной.
 
     cout << result << endl;
     return 0;
