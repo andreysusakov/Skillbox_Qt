@@ -5,10 +5,8 @@
 using namespace std;
 
 int main() {
-//    stringstream example;
-    string example;
     string buffer;
-    double  result;
+    double result;
     double x;
     double y;
     char z;
@@ -21,8 +19,8 @@ int main() {
     cout << buffer_stream.str() << endl;
     buffer_stream >> buffer >> x >> buffer >> z >> buffer >> y;
     cout << x << " " << z << " " << y << endl;
-    result = x + z + y;
-    cout << result << endl;
+    result = ?; //Пока не понимаю как автоматом получить результат из переменных.
 
+    cout << result << endl;
     return 0;
 }
