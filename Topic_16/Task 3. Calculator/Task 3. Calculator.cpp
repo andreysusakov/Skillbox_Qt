@@ -17,7 +17,15 @@ int main() {
     stringstream buffer_stream(buffer);
 
     buffer_stream >> x >> z >> y;
-    result = x + y; //Пока не понимаю как автоматом вставлять оператор из переменной.
+    if(z == '+'){
+        result = x + y;
+    }else if(z == '-'){
+        result = x - y;
+    }else if(z == '*'){
+        result = x * y;
+    }else{
+        result = x / y;
+    }
 
     cout << result << endl;
     return 0;

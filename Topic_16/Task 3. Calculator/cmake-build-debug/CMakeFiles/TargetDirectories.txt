@@ -1,3 +1,3 @@
-D:/Skilbox/Clion/Task 3. Calculator/cmake-build-debug/CMakeFiles/Task_3__Calculator.dir
-D:/Skilbox/Clion/Task 3. Calculator/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Skilbox/Clion/Task 3. Calculator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Skillbox/Topic_16/Task 3. Calculator/cmake-build-debug/CMakeFiles/Task_3__Calculator.dir
+C:/Skillbox/Topic_16/Task 3. Calculator/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Skillbox/Topic_16/Task 3. Calculator/cmake-build-debug/CMakeFiles/rebuild_cache.dir

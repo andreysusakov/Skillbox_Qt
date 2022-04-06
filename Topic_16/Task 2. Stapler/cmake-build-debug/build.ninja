@@ -49,8 +49,8 @@ cmake_ninja_workdir = C$:/Skillbox/Topic_16/Task$ 2.$ Stapler/cmake-build-debug/
 
 build cmake_object_order_depends_target_Task_2__Stapler: phony || CMakeFiles/Task_2__Stapler.dir
 
-build CMakeFiles/Task_2__Stapler.dir/main.cpp.obj: CXX_COMPILER__Task_2__Stapler_Debug C$:/Skillbox/Topic_16/Task$ 2.$ Stapler/main.cpp || cmake_object_order_depends_target_Task_2__Stapler
-  DEP_FILE = CMakeFiles\Task_2__Stapler.dir\main.cpp.obj.d
+build CMakeFiles/Task_2__Stapler.dir/Task_2._Stapler.cpp.obj: CXX_COMPILER__Task_2__Stapler_Debug C$:/Skillbox/Topic_16/Task$ 2.$ Stapler/Task$ 2.$ Stapler.cpp || cmake_object_order_depends_target_Task_2__Stapler
+  DEP_FILE = CMakeFiles\Task_2__Stapler.dir\Task_2._Stapler.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Task_2__Stapler.dir
   OBJECT_FILE_DIR = CMakeFiles\Task_2__Stapler.dir
@@ -65,7 +65,7 @@ build CMakeFiles/Task_2__Stapler.dir/main.cpp.obj: CXX_COMPILER__Task_2__Stapler
 #############################################
 # Link the executable Task_2__Stapler.exe
 
-build Task_2__Stapler.exe: CXX_EXECUTABLE_LINKER__Task_2__Stapler_Debug CMakeFiles/Task_2__Stapler.dir/main.cpp.obj
+build Task_2__Stapler.exe: CXX_EXECUTABLE_LINKER__Task_2__Stapler_Debug CMakeFiles/Task_2__Stapler.dir/Task_2._Stapler.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Task_2__Stapler.dir
