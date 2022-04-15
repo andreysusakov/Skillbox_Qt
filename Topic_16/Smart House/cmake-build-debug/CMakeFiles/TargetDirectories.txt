@@ -1,0 +1,3 @@
+C:/Skillbox/Topic_16/Smart House/cmake-build-debug/CMakeFiles/Smart_House.dir
+C:/Skillbox/Topic_16/Smart House/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Skillbox/Topic_16/Smart House/cmake-build-debug/CMakeFiles/rebuild_cache.dir
