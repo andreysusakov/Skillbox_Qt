@@ -33,7 +33,8 @@ int main() {
         if (time == 24){
             n++;
             time = 0;
-            light_temp = 5000;
+            light_temp = light_temp_1;
+            cout << "light_temp = " << light_temp << endl;
         }
         if (!(switches_state & LIGHTS_OUTSIDE) && (time < 5 || time > 16) && motion){
             switches_state |= LIGHTS_OUTSIDE;
@@ -74,7 +75,7 @@ int main() {
             light_temp = light_temp_1;
             cout << "light_temp = " << light_temp << endl;
         }else if (light_house && time > 16 && time <= 20){
-            light_temp = light_temp_1 - (light_temp_1 - light_temp_2) / 4 * (time - 16); //температура света вна данный час
+            light_temp = light_temp_1 - (light_temp_1 - light_temp_2) / 4 * (time - 16); //температура света на данный час
             cout << "light_temp = " << light_temp << endl;
         }
         time++;

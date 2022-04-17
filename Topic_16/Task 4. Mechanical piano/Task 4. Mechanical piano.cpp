@@ -16,17 +16,18 @@ enum note
 int main() {
     int note = 0;
     int n = 0;
+    string melody [12];
     string chord;
-    
-    do{
-        cout << "Enter a chord: \n";
-        for (int i = 0; i < chord.size(); i++){
 
 
-    }while (n != 12);
-    )
 
-    }
+
+        for (int i = 0; i < 12; i++){
+            cout << "Enter a chord: " << i + 1 << endl;
+            cin >> chord;
+            melody [i] = chord;
+        }
+
 
 
     std::cout << "Hello, World!" << std::endl;
