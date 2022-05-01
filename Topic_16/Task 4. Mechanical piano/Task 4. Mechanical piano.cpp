@@ -18,6 +18,13 @@ int main() {
     string text;
     int melody [12];
     int chord;
+    int chord_number = 0;
+//    int chord_number_2 = 0;
+//    int chord_number_3 = 0;
+//    int chord_number_4 = 0;
+//    int chord_number_5 = 0;
+//    int chord_number_6 = 0;
+//    int chord_number_7 = 0;
 
 
     for (int i = 0; i < 12; i++){
@@ -25,8 +32,8 @@ int main() {
         cin >> chord;
         melody[i] = chord;
     }
-    for (int chord_number = 0; chord_number < 12; chord_number++){
-        text = to_string(melody[chord_number]);
+    for (int j = 0; j < 12; j++){
+        text = to_string(melody[j]);
         for (int k = 0; k < text.size(); k++){
             if (!(chord_number & DO) && text[k] == '1'){
                 chord_number |= DO;
@@ -57,6 +64,7 @@ int main() {
                 cout << "SI" << " ";
             }
         }
+        chord_number = 0;
         cout << endl;
     }
 
