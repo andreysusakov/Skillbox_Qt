@@ -13,11 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3866d5c-5b76-4276-b7a1-d6060b66c820" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task 4. Mechanical piano.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Task 4. Mechanical piano.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Task_4__Mechanical_piano.dir/Task_4._Mechanical_piano.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Task_4__Mechanical_piano.dir/Task_4._Mechanical_piano.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Task_4__Mechanical_piano.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Task_4__Mechanical_piano.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +85,7 @@
       <workItem from="1651159310824" duration="8921000" />
       <workItem from="1651335407827" duration="7800000" />
       <workItem from="1651425761662" duration="5468000" />
+      <workItem from="1651507306949" duration="1332000" />
     </task>
     <servers />
   </component>
