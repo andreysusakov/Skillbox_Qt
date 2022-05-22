@@ -2,7 +2,13 @@
 
 using namespace std;
 
-void swap_int_1 (int* pa, int* pb, int a, int b){
+void swap_int_1 (int* pa, int* pb){
+    int c = 0;
+    int a = *pa;
+    int b = *pb;
+    int* pc = &c;
+
+    *pc = a;
     *pa = b;
     *pb = a;
 }
@@ -12,11 +18,9 @@ int main()
 {
     int a = 25;
     int b = 50;
-    int* pa = &a;
-    int* pb = &b;
     cout << a << " " << b << endl;
 
-    swap_int_1(pa, pb, a, b);
+    swap_int_1(&a, &b);
     cout << a << " " << b << endl;
 
 
