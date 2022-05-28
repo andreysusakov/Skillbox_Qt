@@ -3,16 +3,30 @@
 
 using namespace std;
 
+int Ways(int n, int m)
+
+{
+
+    if (n <= 1)
+
+        return n;
+
+    int res = 0;
+
+    for (int i = 1; i<=m && i<=n; i++)
+
+        res += Ways(n-i, m);
+
+    return res;
+
+}
+
 int main()
 {
-    int n = 12;
+    int n = 3;
+    int m =3;
     int ans;
-    int ans_1;
-    int a = 3;
 
-    ans = n / a;
-    ans_1 = n - ans * a;
-
-
-    cout << ans << " " << ans_1;
+    ans = Ways(n + 1, m);
+    cout << ans;
 }
