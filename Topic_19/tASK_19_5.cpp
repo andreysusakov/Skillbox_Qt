@@ -1,11 +1,13 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 
 using namespace std;
 
 int main()
 {
+    vector<int> oldSector[13];
     int sector = 1;
     string question;
     string answer;
