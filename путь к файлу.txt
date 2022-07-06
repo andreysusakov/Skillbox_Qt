@@ -4,3 +4,4 @@ D:\Skillbox\words_2.txt
 C:\Users\Susakov_AD\Downloads\arab.png
 D:\Skillbox\question.txt
 D:\Skillbox\answer.txt
+C:\Skillbox\statement_w.txt

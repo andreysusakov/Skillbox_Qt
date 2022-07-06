@@ -23,7 +23,7 @@ string quiz (int sector = 0)
 
     if(sector == 1)
     {
-        
+
     }
     string text_link;
     text_iink = q1;
