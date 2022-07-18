@@ -1,0 +1,1 @@
+in_bank.read((char *)&bill, sizeof(bill));

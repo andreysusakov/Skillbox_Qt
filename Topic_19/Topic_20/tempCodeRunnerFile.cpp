@@ -1,0 +1,1 @@
+cout << bank_1[i] << endl;
